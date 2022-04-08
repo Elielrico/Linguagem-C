@@ -12,7 +12,7 @@ int main(){
     printf("Informe o numero de pes e cabecas, respectivamente: \n");
     scanf("%d %d", &n_pes, &n_cabecas);
 
-        if(n_pes > (n_pes/2) && n_pes < n_pes/4){
+        if(n_pes > (n_cabecas*2) && n_pes < n_cabecas*4){
 
             n_patos = (2*n_cabecas - (n_pes/2));
             n_coelhos = (-n_cabecas + (n_pes/2));
@@ -26,5 +26,3 @@ int main(){
         }
 
     return 0;
-
-}
