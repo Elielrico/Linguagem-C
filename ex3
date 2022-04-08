@@ -1,0 +1,30 @@
+#include <stdio.h>
+/*Em um cercado, há vários patos e coelhos.
+Escreva um programa que solicite ao usuário
+o total de cabeças e o total de pés, e
+determine quantos patos e quantos coelhos
+se encontram nesse cercadoç.*/
+
+int main(){
+
+    int n_pes, n_cabecas, n_coelhos, n_patos;
+
+    printf("Informe o numero de pes e cabecas, respectivamente: \n");
+    scanf("%d %d", &n_pes, &n_cabecas);
+
+        if(n_pes > (n_pes/2) && n_pes < n_pes/4){
+
+            n_patos = (2*n_cabecas - (n_pes/2));
+            n_coelhos = (-n_cabecas + (n_pes/2));
+
+            printf("Numero de coelhos: %d \n Numero de patos: %d", n_coelhos, n_patos);
+
+        }else{
+
+             printf("Quantidade de pes nao coerente!");
+
+        }
+
+    return 0;
+
+}
