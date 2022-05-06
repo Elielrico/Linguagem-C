@@ -1,0 +1,24 @@
+#include <stdio.h>
+//Calculo do fatorial
+int main(){
+
+    int n, i, fat = 1;
+
+    printf("Informe um numero: ");
+    scanf("%d", &n);
+
+    int vet[n];
+
+        for(i=0; i<=n-1; i++){
+            //Atribui elementos ao vetor, decrescendo uma unidade do valor informado ao usuário até 1
+            vet[i] = n - i;
+            //Cálculo do fatorial, baseado em multiplicar um elemento x com x-1
+            fat = vet[i] * fat;
+        }
+
+    printf("Fatorial de %d = %d", n, fat);
+
+    return 0;
+
+}
+
