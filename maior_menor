@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <limits.h>
+#define SIZE 4
+//Nome: Eliel José de Souza Françoso
+//NUSP: 12550261
+
+/* Faça um programa que leia um vetor de tamanho TAM definido como macro
+ e imprima os elementos do vetor, o menor e o segundo menor valor
+ armazenado neste vetor. Use as funções rand()%20 e a srand(time(NULL))*/
+
+int main(){
+
+    int vet[SIZE];
+    int i, maior, menor;
+
+    //muda os valores atribuidos por rand() cada vez que o código é executado
+    srand(time(NULL));
+
+        for(i=0; i<=SIZE; i++){
+            vet[i] = rand()%20;
+            printf("%d ", vet[i]);
+        }
+        for(i=1; i<=SIZE; i++){
+            maior = vet[1];
+            menor = vet[1];
+
+                if(maior < vet[i-1]){
+                    maior = vet[i-1];
+                }
+                else{
+                    maior = vet[i];
+                }
+                if(menor > vet[i-1]){
+                    menor = vet[i-1];
+                }
+                else{
+                    menor = vet[i];
+                }
+        }
+
+    printf("\nMaior elemento: %d", maior);
+    printf("\nMenor elemento: %d", menor);
+
+    return 0;
+
+}
+//3 4 2 7 5
+//max1 = max2 = INT_MIN;
+
